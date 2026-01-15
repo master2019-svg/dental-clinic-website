@@ -182,11 +182,8 @@
             background: linear-gradient(rgba(0, 50, 100, 0.7), rgba(0, 50, 100, 0.7)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Parallax feel */
+            background-attachment: fixed;
         }
-        
-        /* Blur effect handled by overlay or backdrop-filter if preferred, 
-           but CSS gradient overlay ensures text readability better than blur alone on bg image */
         
         .hero-content {
             z-index: 2;
@@ -467,7 +464,7 @@
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
             .nav-links {
-                display: none; /* Can be enhanced with JS toggle */
+                display: none; 
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -502,14 +499,8 @@
 
         /* Animations */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -529,42 +520,12 @@
                 </div>
 
                 <ul class="nav-links" id="nav-links">
-                    <li>
-                        <a href="#home">
-                            <span data-lang="en">Home</span>
-                            <span data-lang="ar">الرئيسية</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#services">
-                            <span data-lang="en">Services</span>
-                            <span data-lang="ar">الخدمات</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#doctors">
-                            <span data-lang="en">Doctors</span>
-                            <span data-lang="ar">الأطباء</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#testimonials">
-                            <span data-lang="en">Testimonials</span>
-                            <span data-lang="ar">آراء العملاء</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#appointment">
-                            <span data-lang="en">Book Now</span>
-                            <span data-lang="ar">احجز الآن</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contact">
-                            <span data-lang="en">Contact</span>
-                            <span data-lang="ar">اتصل بنا</span>
-                        </a>
-                    </li>
+                    <li><a href="#home"><span data-lang="en">Home</span><span data-lang="ar">الرئيسية</span></a></li>
+                    <li><a href="#services"><span data-lang="en">Services</span><span data-lang="ar">الخدمات</span></a></li>
+                    <li><a href="#doctors"><span data-lang="en">Doctors</span><span data-lang="ar">الأطباء</span></a></li>
+                    <li><a href="#testimonials"><span data-lang="en">Testimonials</span><span data-lang="ar">آراء العملاء</span></a></li>
+                    <li><a href="#appointment"><span data-lang="en">Book Now</span><span data-lang="ar">احجز الآن</span></a></li>
+                    <li><a href="#contact"><span data-lang="en">Contact</span><span data-lang="ar">اتصل بنا</span></a></li>
                 </ul>
 
                 <button class="lang-toggle" id="lang-btn">
@@ -582,8 +543,8 @@
                 <span data-lang="ar">ابتسامتك، هي شغفنا</span>
             </h1>
             <p>
-                <span data-lang="en">Providing world-class dental care with a gentle touch. Advanced technology for a brighter, healthier smile.</span>
-                <span data-lang="ar">نقدم رعاية أسنان عالمية المستوى بلمسة لطيفة. تقنيات متقدمة لابتسامة أكثر إشراقاً وصحة.</span>
+                <span data-lang="en">Providing world-class dental care with a gentle touch.</span>
+                <span data-lang="ar">نقدم رعاية أسنان عالمية المستوى بلمسة لطيفة.</span>
             </p>
             <a href="#appointment" class="btn">
                 <span data-lang="en">Make an Appointment</span>
@@ -604,51 +565,22 @@
                     <span data-lang="ar">حلول أسنان شاملة لجميع أفراد الأسرة</span>
                 </p>
             </div>
-
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3>
-                        <span data-lang="en">Teeth Whitening</span>
-                        <span data-lang="ar">تبييض الأسنان</span>
-                    </h3>
-                    <p>
-                        <span data-lang="en">Professional whitening treatments to restore the natural brightness of your smile.</span>
-                        <span data-lang="ar">جلسات تبييض احترافية لاستعادة الإشراق الطبيعي لابتسامتك.</span>
-                    </p>
+                    <h3><span data-lang="en">Teeth Whitening</span><span data-lang="ar">تبييض الأسنان</span></h3>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-shield-virus"></i></div>
-                    <h3>
-                        <span data-lang="en">Dental Implants</span>
-                        <span data-lang="ar">زراعة الأسنان</span>
-                    </h3>
-                    <p>
-                        <span data-lang="en">Permanent, durable solutions for missing teeth that look and feel natural.</span>
-                        <span data-lang="ar">حلول دائمة ومتينة للأسنان المفقودة تبدو وتشعر وكأنها طبيعية.</span>
-                    </p>
+                    <h3><span data-lang="en">Dental Implants</span><span data-lang="ar">زراعة الأسنان</span></h3>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
-                    <h3>
-                        <span data-lang="en">Root Canal</span>
-                        <span data-lang="ar">علاج الجذور</span>
-                    </h3>
-                    <p>
-                        <span data-lang="en">Painless procedures to save infected teeth and relieve pain effectively.</span>
-                        <span data-lang="ar">إجراءات غير مؤلمة لإنقاذ الأسنان المصابة وتخفيف الألم بشكل فعال.</span>
-                    </p>
+                    <h3><span data-lang="en">Root Canal</span><span data-lang="ar">علاج الجذور</span></h3>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-notes-medical"></i></div>
-                    <h3>
-                        <span data-lang="en">Routine Checkups</span>
-                        <span data-lang="ar">الفحص الدوري</span>
-                    </h3>
-                    <p>
-                        <span data-lang="en">Regular cleaning and exams to prevent issues before they start.</span>
-                        <span data-lang="ar">تنظيف وفحوصات منتظمة لمنع المشاكل قبل بدايتها.</span>
-                    </p>
+                    <h3><span data-lang="en">Routine Checkups</span><span data-lang="ar">الفحص الدوري</span></h3>
                 </div>
             </div>
         </div>
@@ -661,108 +593,21 @@
                     <span data-lang="en">Meet Our Team</span>
                     <span data-lang="ar">فريقنا الطبي</span>
                 </h2>
-                <p>
-                    <span data-lang="en">Experts dedicated to your dental health</span>
-                    <span data-lang="ar">خبراء مكرسون لصحة أسنانك</span>
-                </p>
             </div>
-
             <div class="doctors-grid">
                 <div class="doctor-card">
                     <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dr. Mohamed Hassan" class="doctor-img">
                     <div class="doctor-info">
-                        <h3>
-                            <span data-lang="en">Dr. Mohamed Hassan</span>
-                            <span data-lang="ar">د. محمد حسن</span>
-                        </h3>
-                        <div class="doctor-title">
-                            <span data-lang="en">Senior Dentist & Founder</span>
-                            <span data-lang="ar">كبير أطباء الأسنان والمؤسس</span>
-                        </div>
+                        <h3><span data-lang="en">Dr. Mohamed Hassan</span><span data-lang="ar">د. محمد حسن</span></h3>
+                        <div class="doctor-title"><span data-lang="en">Senior Dentist</span><span data-lang="ar">كبير أطباء الأسنان</span></div>
                     </div>
                 </div>
-
                 <div class="doctor-card">
                     <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dr. Sarah Ahmed" class="doctor-img">
                     <div class="doctor-info">
-                        <h3>
-                            <span data-lang="en">Dr. Sarah Ahmed</span>
-                            <span data-lang="ar">د. سارة أحمد</span>
-                        </h3>
-                        <div class="doctor-title">
-                            <span data-lang="en">Orthodontist Specialist</span>
-                            <span data-lang="ar">أخصائية تقويم الأسنان</span>
-                        </div>
+                        <h3><span data-lang="en">Dr. Sarah Ahmed</span><span data-lang="ar">د. سارة أحمد</span></h3>
+                        <div class="doctor-title"><span data-lang="en">Orthodontist</span><span data-lang="ar">أخصائية تقويم</span></div>
                     </div>
-                </div>
-
-                <div class="doctor-card">
-                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dr. Ali Omar" class="doctor-img">
-                    <div class="doctor-info">
-                        <h3>
-                            <span data-lang="en">Dr. Ali Omar</span>
-                            <span data-lang="ar">د. علي عمر</span>
-                        </h3>
-                        <div class="doctor-title">
-                            <span data-lang="en">Pediatric Dentist</span>
-                            <span data-lang="ar">طبيب أسنان أطفال</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>
-                    <span data-lang="en">Patient Stories</span>
-                    <span data-lang="ar">قصص المرضى</span>
-                </h2>
-            </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        <span data-lang="en">"Dr. Hassan is incredibly gentle. I used to be afraid of the dentist, but now I look forward to my visits. Highly recommended!"</span>
-                        <span data-lang="ar">"الدكتور حسن لطيف للغاية. كنت أخاف من طبيب الأسنان، لكن الآن أتطلع لزياراتي. أنصح به بشدة!"</span>
-                    </p>
-                    <h4>
-                        <span data-lang="en">- Ahmed K.</span>
-                        <span data-lang="ar">- أحمد ك.</span>
-                    </h4>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        <span data-lang="en">"The clinic is so modern and clean. The whitening results were immediate. Thank you to the whole team!"</span>
-                        <span data-lang="ar">"العيادة حديثة ونظيفة جداً. نتائج التبييض كانت فورية. شكراً للفريق بأكمله!"</span>
-                    </p>
-                    <h4>
-                        <span data-lang="en">- Layla M.</span>
-                        <span data-lang="ar">- ليلى م.</span>
-                    </h4>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        <span data-lang="en">"Great experience with my dental implant. Professional service and great follow-up care."</span>
-                        <span data-lang="ar">"تجربة رائعة مع زراعة الأسنان. خدمة احترافية ومتابعة ممتازة."</span>
-                    </p>
-                    <h4>
-                        <span data-lang="en">- John D.</span>
-                        <span data-lang="ar">- جون د.</span>
-                    </h4>
                 </div>
             </div>
         </div>
@@ -776,65 +621,35 @@
                     <span data-lang="ar">احجز موعداً</span>
                 </h2>
             </div>
-
             <div class="form-container">
                 <form id="booking-form">
                     <div class="form-grid">
                         <div class="form-group full-width">
-                            <label>
-                                <span data-lang="en">Full Name</span>
-                                <span data-lang="ar">الاسم الكامل</span>
-                            </label>
+                            <label><span data-lang="en">Full Name</span><span data-lang="ar">الاسم الكامل</span></label>
                             <input type="text" name="fullName" required placeholder="Ex: Ahmed Mohamed">
                         </div>
-
                         <div class="form-group">
-                            <label>
-                                <span data-lang="en">Phone Number</span>
-                                <span data-lang="ar">رقم الهاتف</span>
-                            </label>
+                            <label><span data-lang="en">Phone Number</span><span data-lang="ar">رقم الهاتف</span></label>
                             <input type="tel" name="phone" required placeholder="+20 123 456 7890">
                         </div>
-
                         <div class="form-group">
-                            <label>
-                                <span data-lang="en">Email Address</span>
-                                <span data-lang="ar">البريد الإلكتروني</span>
-                            </label>
+                            <label><span data-lang="en">Email Address</span><span data-lang="ar">البريد الإلكتروني</span></label>
                             <input type="email" name="email" required placeholder="email@example.com">
                         </div>
-
                         <div class="form-group">
-                            <label>
-                                <span data-lang="en">Age</span>
-                                <span data-lang="ar">العمر</span>
-                            </label>
+                            <label><span data-lang="en">Age</span><span data-lang="ar">العمر</span></label>
                             <input type="number" name="age" required min="1" max="120">
                         </div>
-
                         <div class="form-group">
-                            <label>
-                                <span data-lang="en">Gender</span>
-                                <span data-lang="ar">الجنس</span>
-                            </label>
+                            <label><span data-lang="en">Gender</span><span data-lang="ar">الجنس</span></label>
                             <select name="gender" required>
                                 <option value="" disabled selected>Select / اختر</option>
-                                <option value="male">
-                                    <span data-lang="en">Male</span>
-                                    <span data-lang="ar">ذكر</span>
-                                </option>
-                                <option value="female">
-                                    <span data-lang="en">Female</span>
-                                    <span data-lang="ar">أنثى</span>
-                                </option>
+                                <option value="male"><span data-lang="en">Male</span><span data-lang="ar">ذكر</span></option>
+                                <option value="female"><span data-lang="en">Female</span><span data-lang="ar">أنثى</span></option>
                             </select>
                         </div>
-
                         <div class="form-group full-width">
-                            <label>
-                                <span data-lang="en">Service Needed</span>
-                                <span data-lang="ar">الخدمة المطلوبة</span>
-                            </label>
+                            <label><span data-lang="en">Service Needed</span><span data-lang="ar">الخدمة المطلوبة</span></label>
                             <select name="service" required>
                                 <option value="consultation">Consultation / استشارة</option>
                                 <option value="cleaning">Cleaning / تنظيف</option>
@@ -843,20 +658,12 @@
                                 <option value="orthodontics">Orthodontics / تقويم</option>
                             </select>
                         </div>
-
                         <div class="form-group">
-                            <label>
-                                <span data-lang="en">Preferred Date</span>
-                                <span data-lang="ar">التاريخ المفضل</span>
-                            </label>
+                            <label><span data-lang="en">Preferred Date</span><span data-lang="ar">التاريخ المفضل</span></label>
                             <input type="date" name="date" required>
                         </div>
-
                         <div class="form-group">
-                            <label>
-                                <span data-lang="en">Preferred Time</span>
-                                <span data-lang="ar">الوقت المفضل</span>
-                            </label>
+                            <label><span data-lang="en">Preferred Time</span><span data-lang="ar">الوقت المفضل</span></label>
                             <input type="time" name="time" required>
                         </div>
                     </div>
@@ -868,8 +675,8 @@
 
                     <div id="success-message">
                         <i class="fas fa-check-circle"></i> 
-                        <span data-lang="en">Thank you! Your appointment request has been sent successfully. We will contact you soon.</span>
-                        <span data-lang="ar">شكراً لك! تم إرسال طلب الموعد بنجاح. سنتواصل معك قريباً.</span>
+                        <span data-lang="en">Thank you! Your appointment request has been sent successfully.</span>
+                        <span data-lang="ar">شكراً لك! تم إرسال طلب الموعد بنجاح.</span>
                     </div>
                 </form>
             </div>
@@ -880,82 +687,40 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>
-                        <span data-lang="en">Dr. Mohamed Hassan</span>
-                        <span data-lang="ar">د. محمد حسن</span>
-                    </h3>
+                    <h3><span data-lang="en">Dr. Mohamed Hassan</span><span data-lang="ar">د. محمد حسن</span></h3>
                     <p>
-                        <span data-lang="en">Dedicated to providing the best dental care in a comfortable and relaxing environment.</span>
-                        <span data-lang="ar">مكرسون لتقديم أفضل رعاية أسنان في بيئة مريحة وهادئة.</span>
+                        <span data-lang="en">Dedicated to providing the best dental care.</span>
+                        <span data-lang="ar">مكرسون لتقديم أفضل رعاية أسنان.</span>
                     </p>
                 </div>
-                
                 <div class="footer-col">
-                    <h3>
-                        <span data-lang="en">Quick Links</span>
-                        <span data-lang="ar">روابط سريعة</span>
-                    </h3>
-                    <ul class="footer-links">
-                        <li><a href="#home"><span data-lang="en">Home</span><span data-lang="ar">الرئيسية</span></a></li>
-                        <li><a href="#about"><span data-lang="en">About</span><span data-lang="ar">من نحن</span></a></li>
-                        <li><a href="#services"><span data-lang="en">Services</span><span data-lang="ar">الخدمات</span></a></li>
-                        <li><a href="#appointment"><span data-lang="en">Appointment</span><span data-lang="ar">المواعيد</span></a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>
-                        <span data-lang="en">Contact Info</span>
-                        <span data-lang="ar">معلومات الاتصال</span>
-                    </h3>
+                    <h3><span data-lang="en">Contact Info</span><span data-lang="ar">معلومات الاتصال</span></h3>
                     <ul class="footer-contact">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>
-                                <span data-lang="en">123 Medical St, Cairo, Egypt</span>
-                                <span data-lang="ar">١٢٣ شارع الطبي، القاهرة، مصر</span>
-                            </span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span dir="ltr">+20 123 456 789</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>info@drhassanclinic.com</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <span>
-                                <span data-lang="en">Sat - Thu: 10:00 AM - 10:00 PM</span>
-                                <span data-lang="ar">السبت - الخميس: ١٠:٠٠ ص - ١٠:٠٠ م</span>
-                            </span>
-                        </li>
+                        <li><i class="fas fa-map-marker-alt"></i><span>Cairo, Egypt</span></li>
+                        <li><i class="fas fa-phone"></i><span dir="ltr">+20 123 456 789</span></li>
+                        <li><i class="fas fa-clock"></i><span>Sat - Thu: 10am - 10pm</span></li>
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>
-                    &copy; 2024 Dr. Mohamed Hassan Dental Clinic. 
-                    <span data-lang="en">All Rights Reserved.</span>
-                    <span data-lang="ar">جميع الحقوق محفوظة.</span>
-                </p>
+                <p>&copy; 2024 Dr. Mohamed Hassan Dental Clinic.</p>
                 <button class="lang-toggle" onclick="toggleLanguage()" style="margin-top: 10px; font-size: 0.8rem; padding: 3px 10px;">
-                    <span data-lang="en">العربية</span>
-                    <span data-lang="ar">English</span>
+                    <span data-lang="en">العربية</span><span data-lang="ar">English</span>
                 </button>
             </div>
         </div>
     </footer>
 
     <script>
+        // --- Configuration ---
+        // PASTE YOUR GOOGLE SCRIPT URL BELOW
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzHQy3RLfEiYx1nOCIgqk30WJLU5NMUMuoHXMyg83GDHeeQrvMqeGE3WIk7-8IWpKvo/exec';
+
         // --- Language Toggle Logic ---
         const langBtn = document.getElementById('lang-btn');
         const body = document.body;
         let currentLang = 'en';
 
-        // Function to switch language
         function toggleLanguage() {
             if (currentLang === 'en') {
                 currentLang = 'ar';
@@ -970,73 +735,54 @@
                 document.documentElement.lang = 'en';
                 document.documentElement.dir = 'ltr';
             }
-            
-            // Re-render select options if needed or any specific JS-driven text
-            // Note: CSS [data-lang] selectors handle the bulk of visibility
         }
-
         langBtn.addEventListener('click', toggleLanguage);
 
         // --- Mobile Menu Toggle ---
         const mobileMenuBtn = document.getElementById('mobile-menu');
         const navLinks = document.getElementById('nav-links');
+        mobileMenuBtn.addEventListener('click', () => { navLinks.classList.toggle('active'); });
 
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // --- Form Submission Logic ---
+        // --- Form Submission Logic (Google Sheets) ---
         const form = document.getElementById('booking-form');
         const successMessage = document.getElementById('success-message');
 
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Collect form data
+            // Validate URL was updated
+            if (SCRIPT_URL === 'PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE') {
+                alert('Please update the Javascript code with your Google Apps Script URL!');
+                return;
+            }
+
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
-
-            // Add timestamp
-            data.timestamp = new Date().toISOString();
-
-            // Show loading state (optional visual cue)
+            
+            // Visual Feedback
             const submitBtn = form.querySelector('.submit-btn');
             const originalBtnText = submitBtn.innerHTML;
             submitBtn.innerHTML = currentLang === 'en' ? 'Sending...' : 'جاري الإرسال...';
             submitBtn.disabled = true;
 
-            // Attempt POST request to /api/register
-            fetch('/api/register', {
+            // Send to Google Sheets
+            fetch(SCRIPT_URL, {
                 method: 'POST',
+                mode: 'no-cors', // Important for Google Sheets
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(data)
             })
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                }
-                // If API endpoint doesn't exist (static deployment), we simulate success
-                // Remove this throw if you want to strictly fail on 404
-                throw new Error('API not reachable, simulating success');
-            })
-            .then(result => {
-                console.log('Success:', result);
+            .then(() => {
+                // Since 'no-cors' mode is opaque, we assume success if no network error
                 showSuccess();
             })
             .catch(error => {
-                console.log('API Error (Expected on static host):', error);
-                // For prototype demonstration, we show success even if API fails
-                // In production, you would show an error message here
-                setTimeout(showSuccess, 1000); 
+                console.error('Error!', error.message);
+                alert('Something went wrong. Please try again.');
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
             });
 
             function showSuccess() {
@@ -1044,11 +790,7 @@
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
                 successMessage.style.display = 'block';
-                
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    successMessage.style.display = 'none';
-                }, 5000);
+                setTimeout(() => { successMessage.style.display = 'none'; }, 5000);
             }
         });
     </script>
